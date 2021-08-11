@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div class="container">
+    <h1>Print All Prime Numbers</h1>
+    <form action="{%url 'allprime'%}" method="post">
+        {% csrf_token %}
+        <div>
+            <label for="">First Number</label>
+            <input type="number" name="first">
+        </div>
+        <div>
+            <label for="">Second Number</label>
+            <input type="number" name="second">
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+</body>
+</html>

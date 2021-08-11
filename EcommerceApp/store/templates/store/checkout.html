@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+{% extends 'shop/base.html' %}
+{% load static %}
+{% block body_block %}
+<br>
+<br>
+
+<div class="row">
+    <div class="col-lg-6">
+        <div class="box" id="form_wrapper">
+            <form action="" id="checkout_form">
+                <div class="user_info">
+                    <div class="form_field">
+                        <input type="text" placeholder="name">
+                    </div>
+                    <div class="form_field">
+                        <input type="email" placeholder="email">
+                    </div>
+
+                </div>
+                <div class="shipping_info">
+                    <hr>
+                    <p>shipping information:</p>
+                    <div class="form_field">
+                        <input type="text" placeholder="address">
+                    </div>
+                    <div class="form_field">
+                        <input type="text" placeholder="city">
+                    </div>
+                    <div class="form_field">
+                        <input type="text" placeholder="state">
+                    </div>
+                    <div class="form_field">
+                        <input type="text" placeholder="pin code">
+                    </div>
+                </div>
+                <hr>
+                <input type="submit" value="continue" class="btn btn-dark" id="form-button">
+
+            </form>
+
+        </div>
+
+    </div>
+    <div class="col-lg-6">
+        <div class="box" id="form-wrapper">
+            <div>
+                <a href="{%url 'cart'%}" class="btn btn-dark">Back to Cart</a>
+            </div>
+            <hr>
+            <h3>Order Summary</h3>
+            <hr>
+            <div class="cart_row">
+                <div style="flex: 2;"><img src="{%static 'images/cart.png'%}" alt="" height="80px" width="80px"></div>
+                <div style="flex: 2;"><p>product 1</p></div>
+                <div style="flex: 1;"><p>40 Rs</p></div>
+                <div style="flex: 1;"><p>x2</p></div>
+                <div style="flex: 1;">80 Rs</div>
+            </div>
+            <hr>
+            <h6>Item:2</h6>
+            <h6>Total:80 Rs</h6>
+
+        </div>
+    </div>
+</div>
+{% endblock %}
